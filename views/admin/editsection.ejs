@@ -1,0 +1,12 @@
+<%- include ('partials/header') %>
+
+    <div class="form-container">
+        <h1>Edit <%= Section.sectionName %></h1>
+        <form class="newSection" action="/admin/section/<%= Section._id %>?_method=PUT" method="POST">
+            <input class="inp" type="text" name='sectionName' value="<%- Section.sectionName %>">
+            <button class="inpBtn" type="submit">Edit Section</button>
+        </form>
+    </div>
+</div>
+
+<%- include ('partials/footer') %>

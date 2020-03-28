@@ -1,0 +1,13 @@
+<%- include ('partials/header') %>
+
+    <h1>Admin Dashboard</h1>
+    <div class="margBox">
+        <a href="/admin/newsection"><div id="plust" class="Box-box plus">+</div></a>
+        <% Sections.forEach(function(section){ %>
+            <a href="/admin/section/<%=section._id%>/"><div class="Box-box"><%= section.sectionName %></div></a>
+        <% }) %>
+    </div>
+
+</div>
+
+<%- include ('partials/footer') %>

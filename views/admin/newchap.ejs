@@ -1,0 +1,15 @@
+<%- include ('partials/header') %>
+
+    <div class="form-container">
+        <h1><%= section.sectionName %>:</h1>
+        <h1>Add Chapter to <%= course.courseName %>:</h1>
+        <form class="newSection" action="/admin/<%= section._id %>/course/<%= course._id %>/chapitres/" method="POST">
+            <input class="inp" type="text" name='chapitre[chapitreName]' placeholder="Chapitre Name">
+            <textarea name='chapitre[article]' ></textarea>
+            <input class="inp" type="text" name='chapitre[created_by_art]' placeholder="Auteur">
+            <button class="inpBtn" type="submit">POST</button>
+        </form>
+    </div>
+</div>
+
+<%- include ('partials/footer') %>

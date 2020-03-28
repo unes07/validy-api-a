@@ -1,0 +1,47 @@
+<%- include ('partials/header') %>
+
+<div class="margTab">
+    <div class="tabHead">
+        <h2><%= Section.sectionName %></h2>
+        <div class="btnActions">
+            <a class="addBtn" href="/admin/<%= Section._id %>/course/new">ADD COURSE</a>
+            <a class="editBtn" href="/admin/section/editsection/<%= Section._id %>">EDIT</a>
+            <form action="/admin/section/<%= Section._id %>?_method=DELETE" method="POST">
+                <button class="deleteBtn">DELETE</button>
+            </form>
+        </div>
+    </div>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Sous Titre</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Auteur</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% Section.courses.forEach(function(course){ %>
+                <tr>
+                    <td><a class="btnCourse" href="/admin/<%= Section._id %>/course/<%= course._id %>"><%= course.courseName %></a></td>
+                    <td><%= course.sousTitre.substring(0, 25) %>...</td>
+                    <td><%= course.description.substring(0, 50) %>...</td>
+                    <td><%= course.created_at_cou.toLocaleString() %></td>
+                    <td><%= course.courseCreatedBy %></td>
+                    <td><a class="actEdit" href="/admin/<%= Section._id %>/course/editcourse/<%= course._id %>">Edit </a>
+                        <form action="/admin/<%= Section._id %>/course/<%= course._id %>?_method=DELETE" method="POST">
+                            <button class="deleteBtn">DELETE</button>
+                        </form>
+                        
+                        <!-- <a class="actDelete" href="#"> Delete</a> -->
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<%- include ('partials/footer') %>

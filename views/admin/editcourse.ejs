@@ -1,0 +1,15 @@
+<%- include ('partials/header') %>
+
+    <div class="form-container">
+        <h1>Edit <%= Course.courseName %></h1>
+        <form class="newSection" action="/admin/<%= section._id %>/course/<%= Course._id %>?_method=PUT" method="POST">
+            <input class="inp" type="text" name='courseName' value="<%- Course.courseName %>">
+            <input class="inp" type="text" name='sousTitre' value="<%- Course.sousTitre %>">
+            <input class="inp" type="text" name='description' value="<%- Course.description %>">
+            <input class="inp" type="text" name='courseCreatedBy' value="<%- Course.courseCreatedBy %>">
+            <button class="inpBtn" type="submit">Edit Course</button>
+        </form>
+    </div>
+</div>
+
+<%- include ('partials/footer') %>

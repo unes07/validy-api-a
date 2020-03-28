@@ -1,0 +1,35 @@
+<%- include ('partials/header') %>
+
+<div class="container">
+    <div class="sidebar">
+        <h3><%= foundCourse.courseName %></h3>
+        <ul>
+        <% foundCourse.chapitres.forEach(function(chapitre){ %>
+            <li class="btnchap chapt-active"><a href="#"><%= chapitre.chapitreName %>></a></li>
+        <% }) %>
+        </ul>
+    </div>
+    <div class="contenu">
+        <div class="burger-sidebar">
+            <div class="bline1"></div>
+            <div class="bline2"></div>
+            <div class="bline3"></div>
+        </div>
+
+        <div class="course">
+            <h2 class="section"><%= foundCourse.chapitres[0].chapitreName %></h2>
+            <div class="article">
+                <p class="articlepara"><%= foundCourse.chapitres[0].article %></p>
+            </div>
+        </div>
+    </div>    
+</div>
+<button onclick="goBack()"><i class="fas fa-undo"></i></button>
+<button onclick="next()">Next</button>
+<button onclick="back()">back</button>
+
+
+<div class="footer">
+    <span display='none' class="copyright" id="Sc">BitScript Copyright &copy; 2020</span>    
+</div>
+<%- include ('partials/footer') %>

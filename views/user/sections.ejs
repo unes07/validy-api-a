@@ -1,0 +1,39 @@
+<%- include ('partials/header') %>
+    <div class="sections-warp">
+        <div class="jumbotron"> 
+            <h1>Welcome To <span>V</span>alidy</h1>
+            <p>la premiére platforme en ligne pour les étudiant marocaines</p>
+        </div>
+        <% Sections.forEach(function(section){ %>
+            <div class="sections-courses">
+                <h2 class="section sectionpage colla"><%= section.sectionName %></h2>
+                <div class="allcourses">
+                    <% section.courses.forEach(function(course){ %>
+                    <div class="section-course item itemnotact">
+                        <h2 class="course-title"><%= course.courseName %></h2>
+                        <h4 class="course-soustitle"><%= course.sousTitre %></h4>
+                        <p class="course-description"><%= course.description %></p>
+                        <!-- <% const chapID = course.chapitres[0]._id %> -->
+                        <!-- <a class="course-btn" href="sections/<%=section._id%>/courses/<%=course._id%>/chapitres/<%= chapID %>">Enroll now</a> -->
+                        <a class="course-btn" href="/sections/<%=section._id%>/course/<%=course._id%>/">Enroll now</a>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        <% }) %>
+        <div class="footer">
+            <ul class="sci" id="Sec">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+            <span display='none' class="copyright" id="Sc">BitScript Copyright &copy; 2020</span>    
+        </div>
+        
+
+    <script src="/stylesheets/js/sections.js" type="text/javascript"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,228 @@
+.logoAd img{
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.Box-box{
+    font-size: 20px;
+    color: #56c596;
+    background-color: #205072;
+    text-align: center;
+    font-family: "Poppins", monospace;
+    font-weight: 700;
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+    padding: 100px 10px;
+    margin: 10px 10px 10px 40px;
+    border-radius: 10%;
+}
+
+.Box-box:hover {
+    background: linear-gradient(50deg, #00B5F5, #205072);
+    font-size: 20.5px;
+}
+
+.plus {
+    background-color: rgba(164, 173, 194, 0.849);
+    padding: 50px;
+}
+
+#plust {
+    color: #205072;
+    font-size: 100px;
+}
+
+#plust:hover {
+    font-size: 101px;
+    color: #56c596;
+}
+
+.Box-box a{
+    text-decoration: none;
+    color: #56c596;
+    margin: 0 auto
+}
+
+.margBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+h1 {
+    font-family: "Poppins", monospace;
+    font-size: 35px;
+    color: white;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #205072;
+    border-radius: 25px;
+    background-color: rgba(32, 80, 114, 0.8);
+    margin: 70px 400px;
+}
+
+.newSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inp {
+    text-align: center;
+    width: 400px;
+    height: 30px;
+    margin: 10px 0;
+    font-family: "Poppins", monospace;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #205072;
+}
+
+.inpBtn {
+    width: 180px;
+    height: 30px;
+    background: linear-gradient(50deg, #00B5F5, #56c596);
+    color: #205072;
+    font-family: "Poppins", monospace;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.inpBtn:hover {
+    background: #56c596;
+    font-size: 15.5px;
+}
+
+.margTab {
+    margin: 50px 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tabHead {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 70px;
+}
+
+.tabHead h2{
+    font-family: "Poppins", monospace;
+    font-size: 2em;
+    font-weight: 700;
+    color: #56c596;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #56c596;
+}
+
+.btnActions {
+    margin-top: 15px;
+}
+
+.btnActions a{
+    margin-left: 50px;
+}
+
+.editBtn{
+    background-color: #ffffff;
+    font-size: 1.1em;
+    color: #56c596;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: 1px solid #56c596;
+}
+
+.editBtn:hover {
+    background-color: #56c596;
+    color: #ffffff;
+}
+
+.deleteBtn {
+    background-color: #ffffff;
+    font-size: 1.1em;
+    color: #ec0c57;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: 1px solid #ec0c57;
+}
+
+.deleteBtn:hover {
+    background-color: #ec0c57;
+    color: #ffffff;
+}
+
+.addBtn{
+    background-color: #205072;
+    font-size: 1.1em;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: 1px solid #205072;
+}
+
+.addBtn:hover {
+    background-color: #ffffff;
+    color: #205072;
+    border: 1px solid #205072;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-family: "Poppins", monospace;
+    font-size: 1.1em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #205072;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th, .content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #205072;
+}
+
+.btnCourse {
+    color: #0095ff;
+}
+
+.actEdit {
+    color: #56c596;
+}
+
+.actDelete {
+    color: #ec0c57;
+    padding-left: 5px;
+}

@@ -1,0 +1,134 @@
+/* Colors */
+/* 00aa00
+000 */
+
+@import url('https://fonts.googleapis.com/css?family=Salsa&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #205072;
+  font-family: "Poppins", monospace;
+}
+
+.logo img {
+  color: #56c596;
+  height: 50%;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #56c596;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #56c596;
+  margin: 5px;
+  transition: all 0.3 ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #205072;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    transform: translate(100%, -100%);
+    transition: transform 0.3s ease-in;
+    border-radius: 0px 0px 0px 145px;
+    padding-bottom: 15px;
+    z-index: 1;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+  .container-act{
+    margin-top: 2%;
+    transform: translateY(25vh);
+    transition: all 0.3s ease-in;
+  }
+  .logo img {
+    color: #56c596;
+    height: 25%;
+    width: 25%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+}
+
+.nav-active {
+  transform: translateY(0vh);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
